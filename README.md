@@ -1,79 +1,147 @@
-# PHP-Modern-Learning
+# MySQL in Action — Free Learning Edition
 
-บทเรียนภาษา PHP แบบ **professional, modern, และใช้งานได้จริง** สำหรับผู้เริ่มต้นจนถึงผู้ที่ต้องการปูพื้นฐานให้ถูกต้องตั้งแต่ต้น โดยเนื้อหาถูกออกแบบให้อ่านง่าย นำไปฝึกเขียนตามได้ทันที และเหมาะสำหรับใช้เป็นแหล่งเรียนรู้บน GitHub
+> เวอร์ชันปรับปรุงสำหรับการสอนและการเรียนรู้ด้วย **MySQL Community Server 8.4 LTS**
 
-## จุดประสงค์ของ Repository
+[![MySQL](https://img.shields.io/badge/MySQL-8.4%20LTS-4479A1?logo=mysql&logoColor=white)](https://dev.mysql.com/doc/refman/8.4/en/)
+[![Edition](https://img.shields.io/badge/Edition-Free%20Learning-success)](#ขอบเขตของ-free-learning-edition)
+[![Language](https://img.shields.io/badge/Language-Thai%20%2B%20SQL-blue)](#รูปแบบการเรียน)
 
-Repository นี้จัดทำขึ้นเพื่อรวบรวมบทเรียน PHP ในรูปแบบ Markdown ที่เน้นทั้ง **พื้นฐานที่จำเป็น** และ **แนวทางการพัฒนาแบบสมัยใหม่** เช่น clean code, reusable functions, OOP, namespaces, Composer, error handling, security basics และการเชื่อมต่อฐานข้อมูลอย่างปลอดภัย
+Repository นี้เป็นชุดบทเรียน MySQL ภาษาไทยแบบลงมือทำ เหมาะสำหรับผู้เริ่มต้น ผู้สอน และผู้ที่ต้องการทบทวน SQL อย่างเป็นระบบ โดยปรับจากเอกสารรวมเดิมให้เป็นหลักสูตรแบบโมดูล พร้อมฐานข้อมูลตัวอย่าง แบบฝึกหัด และ Capstone Project
 
-## เหมาะสำหรับใคร
+## เวอร์ชันอ้างอิง
 
-- ผู้เริ่มต้นที่ต้องการเรียน PHP อย่างเป็นระบบ
-- ผู้ที่เคยเขียน PHP มาแล้ว แต่ต้องการปรับแนวทางให้ทันสมัยขึ้น
-- ผู้สอนหรือผู้ฝึกอบรมที่ต้องการ lesson note สำหรับสอนต่อ
-- ผู้ที่ต้องการเก็บบทเรียน PHP ไว้เป็น GitHub portfolio หรือ knowledge base
+ปรับปรุงล่าสุด: **26 กรกฎาคม 2026**
 
-## รูปแบบเนื้อหา
+| รายการ | เวอร์ชันที่ใช้ |
+|---|---|
+| Teaching baseline | MySQL Community Server **8.4 LTS** |
+| Patch ที่ตรวจสอบล่าสุด | **8.4.10** — 16 มิถุนายน 2026 |
+| Release track สำหรับผู้เรียน | LTS เพื่อความเสถียรและใช้สอนได้ต่อเนื่อง |
+| Innovation track | ใช้ศึกษาเพิ่มเติม ไม่ใช้เป็นฐานหลักของ Lab |
+| Early Access | ไม่ใช้ในหลักสูตรพื้นฐาน |
 
-แต่ละบทเรียนจะถูกจัดให้อยู่ในรูปแบบที่อ่านง่ายและนำไปใช้ต่อได้ทันที โดยทั่วไปจะประกอบด้วย:
+เหตุผลที่เลือก 8.4 LTS: เหมาะกับการเรียนและระบบที่ต้องการ feature set คงที่ มีระยะสนับสนุนยาว และลดความเสี่ยงจาก behavior change ระหว่างการสอน
 
-- บทนำของหัวข้อ
-- สิ่งที่ผู้เรียนจะได้เรียน
-- คำอธิบายแบบกระชับและเป็นขั้นตอน
-- ตัวอย่างโค้ด PHP ที่อ่านง่ายและรันได้
-- comment ในโค้ดเพื่อช่วยอธิบายแนวคิด
-- สรุปประเด็นสำคัญที่ควรเข้าใจ
+## ขอบเขตของ Free Learning Edition
 
-## หัวข้อที่ครอบคลุม
+- ใช้ MySQL Community Server และเครื่องมือที่ใช้งานได้โดยไม่ต้องซื้อ MySQL Enterprise Edition
+- เนื้อหาและตัวอย่างเขียนขึ้นใหม่สำหรับการเรียนรู้ ไม่คัดลอกข้อความจากหนังสืออ้างอิง
+- มีทั้ง SQL พื้นฐาน การออกแบบฐานข้อมูล การวิเคราะห์ข้อมูล Transaction, Index, Security และ Backup
+- ใช้ฐานข้อมูลตัวอย่างเดียวต่อเนื่อง เพื่อให้ผู้เรียนเห็นภาพตั้งแต่ schema จนถึง performance tuning
+- รองรับการเรียนผ่าน Docker หรือ MySQL ที่ติดตั้งในเครื่อง
 
-หัวข้อใน repository นี้จะค่อย ๆ เรียงจากพื้นฐานไปสู่การใช้งานจริง เช่น:
+## ผลลัพธ์การเรียนรู้
 
-- PHP Syntax
-- Variables and Data Types
-- Functions and Reusable Code
-- Conditionals and Loops
-- Arrays
-- OOP in PHP
-- Namespaces and Autoloading
-- Composer Basics
-- Error Handling
-- PHP + MySQL with PDO
-- Security Basics
-- Basic Testing and Project Structure
+เมื่อเรียนครบ ผู้เรียนควรสามารถ:
 
-## ตัวอย่างโครงสร้าง Repository
+1. สร้างฐานข้อมูลและตารางด้วยชนิดข้อมูลที่เหมาะสม
+2. ใช้ `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`, `JOIN`, `GROUP BY` และ `HAVING`
+3. ใช้ CTE, Window Functions, Views และ JSON เบื้องต้น
+4. ออกแบบ Primary Key, Foreign Key, `UNIQUE` และ `CHECK` constraints
+5. ใช้ Transaction และอธิบายปัญหา concurrency พื้นฐานได้
+6. ออกแบบ Index จาก query จริง และอ่าน `EXPLAIN ANALYZE`
+7. จัดการบัญชีผู้ใช้ด้วย Role และหลัก Least Privilege
+8. สำรองและกู้คืนข้อมูลด้วย `mysqldump`
+9. ทำ Capstone Project ด้าน Sales Analytics ได้ครบวงจร
+
+## โครงสร้าง Repository
 
 ```text
-php-modern-learning/
+MySQL-in-Action-Ver.1/
 ├── README.md
-├── lessons/
-│   ├── 01-php-syntax-and-modern-project-setup.md
-│   ├── 02-php-variables-and-data-types.md
-│   └── 03-php-functions-and-reusable-code.md
-└── examples/
-    └── basic-demo/
+├── CHANGELOG.md
+├── REFERENCES.md
+├── docker-compose.yml
+├── .env.example
+├── docs/
+│   ├── 00-instructor-guide.md
+│   ├── 01-setup-and-versioning.md
+│   ├── 02-foundations-and-data-modeling.md
+│   ├── 03-querying-and-analytics.md
+│   ├── 04-transactions-and-concurrency.md
+│   ├── 05-indexing-and-performance.md
+│   ├── 06-security-backup-and-operations.md
+│   └── 07-capstone-project.md
+├── examples/
+│   ├── 00-schema.sql
+│   ├── 01-seed.sql
+│   └── 02-labs.sql
+└── MySQL-All-lesson.md
 ```
 
-## เป้าหมายการเรียนรู้
+`MySQL-All-lesson.md` ยังคงเก็บไว้เป็น **Legacy Combined Notes** สำหรับอ้างอิงบทเรียนเดิม ส่วนผู้เรียนใหม่ควรเริ่มจาก `docs/`
 
-เมื่อเรียนตามบทเรียนใน repository นี้ ผู้เรียนควรสามารถ:
+## เส้นทางเรียน
 
-- เข้าใจหลักการเขียน PHP ที่ถูกต้อง
-- เขียนโค้ดที่อ่านง่ายและดูแลรักษาได้
-- เริ่มต้นโปรเจกต์ PHP แบบ modern ได้อย่างมั่นใจ
-- เชื่อมโยงจากพื้นฐานไปสู่การใช้งานจริงในงานพัฒนาเว็บ
+| Module | หัวข้อ | เวลาแนะนำ |
+|---|---|---:|
+| 0 | Instructor Guide และ Course Setup | 30 นาที |
+| 1 | Setup, Versioning และ MySQL Release Model | 1.5 ชม. |
+| 2 | SQL Foundations, Schema และ Constraints | 3 ชม. |
+| 3 | Querying, JOIN, CTE และ Analytics | 4 ชม. |
+| 4 | Transactions, Locking และ Isolation | 2.5 ชม. |
+| 5 | Indexing, EXPLAIN ANALYZE และ Optimization | 3 ชม. |
+| 6 | Security, Roles, Backup และ Operations | 2.5 ชม. |
+| 7 | Capstone Project | 3–6 ชม. |
 
-## วิธีใช้งาน
+## เริ่มใช้งานด้วย Docker
 
-1. เปิดอ่านบทเรียนตามลำดับจากพื้นฐานไปก่อน
-2. ทดลองพิมพ์โค้ดและรันตามตัวอย่าง
-3. ปรับแก้โค้ดเพื่อฝึกความเข้าใจ
-4. นำแนวคิดไปประยุกต์ใช้ใน mini project ของตนเอง
+1. คัดลอกไฟล์ environment
 
-## หมายเหตุ
+```bash
+cp .env.example .env
+```
 
-เนื้อหาใน repository นี้ตั้งใจออกแบบให้ **สั้น กระชับ ชัดเจน และพร้อมใช้งานจริง** โดยเน้นแนวทาง PHP ยุคปัจจุบันมากกว่าตัวอย่างแบบเก่าที่ล้าสมัย
+2. เริ่ม MySQL
+
+```bash
+docker compose up -d
+```
+
+3. โหลด schema และข้อมูลตัวอย่าง
+
+```bash
+docker compose exec -T mysql mysql -uroot -pchange-me < examples/00-schema.sql
+docker compose exec -T mysql mysql -uroot -pchange-me < examples/01-seed.sql
+```
+
+4. ตรวจสอบเวอร์ชัน
+
+```sql
+SELECT VERSION();
+```
+
+> เปลี่ยนรหัสผ่านใน `.env` ก่อนใช้งานนอกเครื่องส่วนตัว และอย่า commit `.env` ขึ้น repository
+
+## รูปแบบการเรียน
+
+แต่ละโมดูลประกอบด้วย:
+
+- Learning Objectives
+- แนวคิดสำคัญ
+- SQL ตัวอย่างพร้อม comment
+- Lab แบบลงมือทำ
+- จุดผิดพลาดที่พบบ่อย
+- Checkpoint Questions
+- เฉลยหรือแนวทางตรวจสอบผลลัพธ์
+
+## แนวทางสำหรับผู้สอน
+
+เปิดจาก [`docs/00-instructor-guide.md`](docs/00-instructor-guide.md) เพื่อดูแผนสอน 12 ชั่วโมง, 18 ชั่วโมง และ Workshop แบบ 1 วัน พร้อมเกณฑ์ประเมิน Capstone
+
+## หลักการสำคัญของหลักสูตร
+
+- **Correctness before cleverness** — ผลลัพธ์ต้องถูกต้องก่อนทำให้ query ซับซ้อน
+- **Measure before optimize** — ใช้ `EXPLAIN` และ `EXPLAIN ANALYZE` ก่อนตัดสินใจเพิ่ม index
+- **Data integrity by design** — ใช้ constraints ป้องกันข้อมูลผิดตั้งแต่ schema
+- **Least privilege** — ไม่ใช้ `root` เป็นบัญชีของ application
+- **Backup is incomplete until restore is tested** — สำรองข้อมูลอย่างเดียวไม่พอ ต้องทดลองกู้คืน
+
+## แหล่งอ้างอิง
+
+ดู [`REFERENCES.md`](REFERENCES.md) โดยให้ MySQL 8.4 Reference Manual และ Release Notes ของ Oracle เป็น version authority หลัก
 
 ---
 
-หากคุณกำลังมองหาจุดเริ่มต้นของการเรียน PHP ที่ทั้ง **เป็นระบบ** และ **นำไปใช้ได้จริง** `php-modern-learning` คือพื้นที่สำหรับเริ่มต้นได้อย่างมั่นใจ
+**MySQL in Action — Free Learning Edition**  
+เรียนจาก query จริง ออกแบบจากปัญหาจริง และวัดผลด้วย execution plan จริง
