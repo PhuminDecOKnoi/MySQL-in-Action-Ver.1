@@ -1,0 +1,18 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# MySQL local files
+*.sql.gz
+*.dump
+backups/
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.log
+*.tmp
